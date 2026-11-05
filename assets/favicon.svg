@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Teddy Cabs Vellore bear mark">
+  <rect width="64" height="64" rx="14" fill="#172B49"/>
+  <circle cx="21" cy="21" r="7" fill="#F07842"/>
+  <circle cx="43" cy="21" r="7" fill="#F07842"/>
+  <circle cx="21" cy="21" r="3" fill="#172B49"/>
+  <circle cx="43" cy="21" r="3" fill="#172B49"/>
+  <rect x="14" y="21" width="36" height="31" rx="15" fill="#F07842"/>
+  <ellipse cx="32" cy="40" rx="11" ry="8.5" fill="#FFE9DE"/>
+  <circle cx="26.5" cy="34" r="2.4" fill="#172B49"/>
+  <circle cx="37.5" cy="34" r="2.4" fill="#172B49"/>
+  <ellipse cx="32" cy="40" rx="3" ry="2.2" fill="#172B49"/>
+</svg>

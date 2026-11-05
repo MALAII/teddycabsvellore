@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# Public brochure site — nothing blocked.
+
+Sitemap: https://teddycabsvellore.com/sitemap.xml
