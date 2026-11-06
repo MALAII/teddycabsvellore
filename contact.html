@@ -138,7 +138,7 @@
           <li><a class="nav__link is-active" href="contact.html" aria-current="page">Contact</a></li>
       </ul>
       <div class="nav__right">
-        <a class="btn btn--sm" href="index.html#booking">Book a cab <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn--sm" href="https://wa.me/918148596089?text=Hello%20Teddy%20Cabs%2C%20I%20would%20like%20to%20book%20a%20cab" target="_blank" rel="noopener">Book a cab <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navSheet">
           <i></i><i></i><i></i>
         </button>
@@ -155,7 +155,7 @@
           <li><a class="nav__sheet-link is-active" href="contact.html">Contact<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
       </ul>
       <div class="nav__sheet-foot">
-        <a class="btn" href="index.html#booking">Book a cab <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn" href="https://wa.me/918148596089?text=Hello%20Teddy%20Cabs%2C%20I%20would%20like%20to%20book%20a%20cab" target="_blank" rel="noopener">Book a cab <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         <a class="btn btn--ghost" href="contact.html">Contact the team</a>
         <p class="nav__sheet-note">Vellore, Tamil Nadu &middot; Local &amp; outstation cab enquiries</p>
       </div>
@@ -186,6 +186,7 @@
     <div class="container">
       <div class="contact-grid">
         <div class="contact-card" data-reveal="left">
+          <p class="tagline">Online booking enquiry</p>
           <h2>Send us your journey details</h2>
           <p class="muted" style="font-size:0.9375rem">Fields with an asterisk are required. Fill in your journey details to connect directly with our dispatch desk on WhatsApp.</p>
           <form id="contactForm" novalidate style="margin-top:1.5rem">
@@ -240,56 +241,58 @@
           </form>
         </div>
 
-        <div id="contact-details">
-          <p class="tagline" data-reveal>Contact details</p>
-          <h2 data-reveal data-delay="60" style="font-size:clamp(1.5rem,2.4vw,2rem)">Where to find us</h2>
-          <p class="muted" data-reveal data-delay="90" style="font-size:0.9375rem">Reach our Vellore dispatch desk directly for immediate bookings, airport pickups, or customized outstation trip quotes.</p>
-          <ul class="contact-items" data-reveal data-delay="120" style="margin-top:1.25rem">
+        <div id="contact-details" class="contact-info-card" data-reveal="right">
+          <p class="tagline tagline--navy">Direct Contact Desk</p>
+          <h2 style="font-size:clamp(1.5rem,2.4vw,2rem)">Where to find us</h2>
+          <p class="muted" style="font-size:0.9375rem">Reach our Vellore dispatch desk directly for immediate bookings, airport pickups, or customized outstation trip quotes.</p>
+          <ul class="contact-items" style="margin-top:1.25rem">
             <li>
               <span class="contact-items__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
-              <div>
+              <div class="contact-items__content">
                 <p class="contact-items__label">Contact Person</p>
                 <p class="contact-items__value">M. Guru Nathan</p>
               </div>
             </li>
             <li>
               <span class="contact-items__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.1a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span>
-              <div>
+              <div class="contact-items__content">
                 <p class="contact-items__label">Phone</p>
                 <p class="contact-items__value"><a href="tel:+918148596089">+91 81485 96089</a></p>
               </div>
+              <a class="contact-pill-btn" href="tel:+918148596089" aria-label="Call Teddy Cabs">Call</a>
             </li>
             <li>
               <span class="contact-items__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 21l2-5.6A8.4 8.4 0 1 1 21 11.5z"/><path d="M9 9.5c0 .8 1 2.4 2 3.2s2.2 1.3 2.9 1.3c.5 0 1-.6 1.1-1.1l-1.6-.9-1 .8c-.7-.3-1.6-1.3-1.9-2l.8-1-.8-1.5c-.6.1-1.5.4-1.5 1.2z"/></svg></span>
-              <div>
+              <div class="contact-items__content">
                 <p class="contact-items__label">WhatsApp</p>
                 <p class="contact-items__value"><a href="https://wa.me/918148596089" target="_blank" rel="noopener">+91 81485 96089</a></p>
               </div>
+              <a class="contact-pill-btn contact-pill-btn--wa" href="https://wa.me/918148596089" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">Chat</a>
             </li>
             <li>
               <span class="contact-items__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m22 7-10 6L2 7"/></svg></span>
-              <div>
+              <div class="contact-items__content">
                 <p class="contact-items__label">Email</p>
                 <p class="contact-items__value"><a href="mailto:booking@teddycabsvellore.com">booking@teddycabsvellore.com</a></p>
               </div>
             </li>
             <li>
               <span class="contact-items__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
-              <div>
+              <div class="contact-items__content">
                 <p class="contact-items__label">Service area</p>
                 <p class="contact-items__value">Vellore &amp; across Tamil Nadu, Bangalore, Tirupati</p>
               </div>
             </li>
             <li>
               <span class="contact-items__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
-              <div>
+              <div class="contact-items__content">
                 <p class="contact-items__label">Business hours</p>
                 <p class="contact-items__value">24 Hours / 7 Days (Round-the-clock booking)</p>
               </div>
             </li>
             <li>
               <span class="contact-items__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V7l6-4v18"/><path d="M11 21V10l8 4v7"/><path d="M8 9v.01M8 13v.01M8 17v.01M15 15v.01M15 18v.01"/></svg></span>
-              <div>
+              <div class="contact-items__content">
                 <p class="contact-items__label">Address</p>
                 <p class="contact-items__value">246/2B, Sakthi Nagar, Kalpudhur, Katpadi, Vellore - 632007, Tamil Nadu</p>
               </div>
@@ -363,7 +366,7 @@
           <p data-reveal data-delay="100">Send your journey details and we will come back with a fare you can plan around.</p>
         </div>
         <div class="cta__actions" data-reveal data-delay="140">
-          <a class="btn" href="index.html#booking">Book a cab <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn" href="https://wa.me/918148596089?text=Hello%20Teddy%20Cabs%2C%20I%20would%20like%20to%20book%20a%20cab" target="_blank" rel="noopener">Book a cab <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           <a class="btn btn--ghost" href="tariff.html">See fare guide</a>
         </div>
       </div>
@@ -391,7 +394,7 @@
           </span>
         </a>
         <p>Your friendly cab service from Vellore. Local rides, one way drops, outstation trips and airport transfers — booked with a simple enquiry and a real conversation.</p>
-        <a class="btn btn--sm" href="index.html#booking">Plan my ride <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn--sm" href="https://wa.me/918148596089?text=Hello%20Teddy%20Cabs%2C%20I%20would%20like%20to%20plan%20a%20ride" target="_blank" rel="noopener">Plan my ride <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
       <div class="footer-col">
         <h3>Quick links</h3>
@@ -437,7 +440,7 @@
     <p class="footer-legal">Teddy Cabs Vellore is a cab booking enquiry service based in Vellore, Tamil Nadu. Vehicle availability, fares, tolls, permits and timings are confirmed for each journey before travel. District and route information describes destinations you can enquire about and is not a guarantee of daily service on every route.</p>
   </div>
 </footer>
-<a class="float-wa" href="index.html#booking" aria-label="Plan a cab journey on WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 21l2-5.6A8.4 8.4 0 1 1 21 11.5z"/><path d="M9 9.5c0 .8 1 2.4 2 3.2s2.2 1.3 2.9 1.3c.5 0 1-.6 1.1-1.1l-1.6-.9-1 .8c-.7-.3-1.6-1.3-1.9-2l.8-1-.8-1.5c-.6.1-1.5.4-1.5 1.2z"/></svg></a>
+<a class="float-wa" href="https://wa.me/918148596089" target="_blank" rel="noopener" aria-label="Plan a cab journey on WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 21l2-5.6A8.4 8.4 0 1 1 21 11.5z"/><path d="M9 9.5c0 .8 1 2.4 2 3.2s2.2 1.3 2.9 1.3c.5 0 1-.6 1.1-1.1l-1.6-.9-1 .8c-.7-.3-1.6-1.3-1.9-2l.8-1-.8-1.5c-.6.1-1.5.4-1.5 1.2z"/></svg></a>
 <script src="js/script.js" defer></script>
 </body>
 </html>

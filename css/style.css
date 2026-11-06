@@ -187,6 +187,8 @@ strong { font-weight: 600; }
 }
 .section--navy .tagline { background: rgba(255, 255, 255, 0.1); color: var(--orange-soft); }
 .section--navy .tagline::before { box-shadow: 0 0 0 3px rgba(240, 120, 66, 0.3); }
+.tagline--navy { background: rgba(23, 43, 73, 0.09); color: var(--navy); }
+.tagline--navy::before { background: var(--navy); box-shadow: 0 0 0 3px rgba(23, 43, 73, 0.18); }
 
 .lede { font-size: clamp(1.0625rem, 1.25vw, 1.25rem); line-height: 1.62; color: #4b5765; max-width: 60ch; }
 .section--navy .lede { color: var(--muted-on-dark); }
@@ -1680,19 +1682,163 @@ body.nav-open .nav__toggle {
   flex-shrink: 0;
 }
 
-/* Contact */
-.contact-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: clamp(1.5rem, 4vw, 3rem); align-items: start; }
-.contact-card { border-radius: var(--radius-lg); background: var(--white); border: 1px solid var(--line); box-shadow: var(--shadow); padding: clamp(1.5rem, 2.6vw, 2.25rem); }
-.contact-card h2 { font-size: clamp(1.5rem, 2.4vw, 2rem); }
-.contact-items { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.7rem; }
-.contact-items li { margin: 0; display: grid; grid-template-columns: 46px 1fr; gap: 0.9rem; align-items: start; padding: 1rem 1.05rem; border-radius: var(--radius); background: var(--grey); }
-.contact-items__icon { width: 46px; height: 46px; display: grid; place-items: center; border-radius: 12px; background: rgba(240, 120, 66, 0.14); color: var(--orange-deep); }
-.contact-items__icon svg { width: 21px; height: 21px; stroke: currentColor; fill: none; stroke-width: 1.9; }
-.contact-items__label { font-family: var(--font-display); font-size: 0.6875rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
-.contact-items__value { font-size: 0.9875rem; color: var(--navy); font-weight: 500; }
-.contact-items__value a { color: var(--navy); text-decoration: none; transition: color 0.2s var(--ease); }
-.contact-items__value a:hover { color: var(--orange-deep); text-decoration: underline; }
-.contact-items__value--pending { color: var(--muted); font-style: italic; font-weight: 400; }
+/* Contact — Differentiated Form & Direct Desk Cards */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.08fr 0.92fr;
+  gap: clamp(1.75rem, 4vw, 3rem);
+  align-items: stretch;
+}
+
+/* Card 1: Online Journey Booking Form */
+.contact-card {
+  border-radius: var(--radius-lg);
+  background: var(--white);
+  border: 1px solid rgba(23, 43, 73, 0.12);
+  border-top: 5px solid var(--orange);
+  box-shadow: 0 14px 38px -12px rgba(23, 43, 73, 0.1);
+  padding: clamp(1.5rem, 2.6vw, 2.35rem);
+  position: relative;
+  transition: box-shadow 0.3s var(--ease);
+}
+.contact-card:hover {
+  box-shadow: 0 18px 44px -14px rgba(23, 43, 73, 0.14);
+}
+.contact-card h2 {
+  font-size: clamp(1.5rem, 2.4vw, 2rem);
+  color: var(--navy);
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+/* Card 2: Direct Contact Desk */
+.contact-info-card {
+  border-radius: var(--radius-lg);
+  background: #f3f7fb;
+  background: linear-gradient(180deg, #f4f8fc 0%, #edf3f9 100%);
+  border: 1px solid rgba(23, 43, 73, 0.12);
+  border-top: 5px solid var(--navy);
+  box-shadow: 0 14px 38px -12px rgba(23, 43, 73, 0.08);
+  padding: clamp(1.5rem, 2.6vw, 2.35rem);
+  position: relative;
+  transition: box-shadow 0.3s var(--ease);
+}
+.contact-info-card:hover {
+  box-shadow: 0 18px 44px -14px rgba(23, 43, 73, 0.12);
+}
+.contact-info-card h2 {
+  font-size: clamp(1.5rem, 2.4vw, 2rem);
+  color: var(--navy);
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.contact-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+.contact-items li {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.95rem;
+  padding: 0.95rem 1.15rem;
+  border-radius: var(--radius);
+  background: var(--white);
+  border: 1px solid rgba(23, 43, 73, 0.08);
+  box-shadow: 0 2px 8px rgba(23, 43, 73, 0.03);
+  transition: all 0.2s var(--ease);
+}
+.contact-items li:hover {
+  transform: translateY(-2px);
+  border-color: rgba(240, 120, 66, 0.35);
+  box-shadow: 0 6px 18px rgba(23, 43, 73, 0.08);
+}
+.contact-items__icon {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: rgba(240, 120, 66, 0.12);
+  color: var(--orange-deep);
+  flex-shrink: 0;
+}
+.contact-items__icon svg {
+  width: 21px;
+  height: 21px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.9;
+}
+.contact-items__content {
+  flex: 1;
+  min-width: 0;
+}
+.contact-items__label {
+  font-family: var(--font-display);
+  font-size: 0.6875rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.15rem;
+}
+.contact-items__value {
+  font-size: 0.9875rem;
+  color: var(--navy);
+  font-weight: 600;
+  word-break: break-word;
+}
+.contact-items__value a {
+  color: var(--navy);
+  text-decoration: none;
+  transition: color 0.2s var(--ease);
+}
+.contact-items__value a:hover {
+  color: var(--orange-deep);
+  text-decoration: underline;
+}
+.contact-items__value--pending {
+  color: var(--muted);
+  font-style: italic;
+  font-weight: 400;
+}
+.contact-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.8rem;
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  background: rgba(240, 120, 66, 0.12);
+  color: var(--orange-deep);
+  text-decoration: none;
+  flex-shrink: 0;
+  transition: all 0.2s var(--ease);
+}
+.contact-pill-btn:hover {
+  background: var(--orange);
+  color: var(--white);
+  text-decoration: none;
+  transform: scale(1.05);
+}
+.contact-pill-btn--wa {
+  background: rgba(37, 211, 102, 0.14);
+  color: #128c7e;
+}
+.contact-pill-btn--wa:hover {
+  background: #25d366;
+  color: var(--white);
+}
 .map-card { margin-top: 1.25rem; border-radius: var(--radius-lg); overflow: hidden; border: 1px dashed var(--line-strong); min-height: 260px; display: grid; place-items: center; text-align: center; padding: 2rem; background-color: var(--sky); background-image: radial-gradient(circle at 20% 25%, rgba(240, 120, 66, 0.16), transparent 45%), radial-gradient(circle at 78% 70%, rgba(23, 43, 73, 0.14), transparent 48%); }
 .map-card svg { width: 30px; height: 30px; margin: 0 auto 0.5rem; stroke: var(--navy); fill: none; stroke-width: 1.8; }
 .map-card strong { display: block; font-family: var(--font-display); font-size: 1.0625rem; color: var(--navy); }
@@ -1962,7 +2108,7 @@ body.nav-open .nav__toggle {
   .faq-grid { grid-template-columns: 1fr; }
   .service-block { grid-template-columns: 1fr; gap: 1.5rem; }
   .service-block:nth-child(even) .service-block__media { order: 0; }
-  .contact-grid { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; gap: 2.75rem; }
   .cta__inner { grid-template-columns: 1fr; }
   .cta__actions { justify-content: flex-start; }
   .booking__top { flex-direction: column; align-items: flex-start; }

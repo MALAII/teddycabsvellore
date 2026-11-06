@@ -287,7 +287,7 @@ const TARIFF_CONFIG = {
       row.appendChild(a);
       out.appendChild(row);
       out.appendChild(copyRow(message));
-      window.open(url, "_blank", "noopener");
+      window.location.href = url;
     });
   }
 
@@ -346,7 +346,7 @@ const TARIFF_CONFIG = {
         row.appendChild(a);
         out.appendChild(row);
         out.appendChild(copyRow(summary));
-        window.open(url, "_blank", "noopener");
+        window.location.href = url;
         return;
       }
 
@@ -389,6 +389,46 @@ const TARIFF_CONFIG = {
     });
   }
 
+  function initBookingLinks() {
+    if (!TEDDY.whatsappNumber) return;
+    const baseWa = `https://wa.me/${TEDDY.whatsappNumber}`;
+    $$('a[href*="#booking"], a[href*="index.html#booking"]').forEach((a) => {
+      if (a.classList.contains("btn") || a.classList.contains("nav__sheet-link")) {
+        const text = (a.textContent || "").trim();
+        let msg = `Hello ${TEDDY.name}, I would like to book a cab.`;
+        if (/sedan/i.test(text)) msg = `Hello ${TEDDY.name}, I would like to book a Sedan cab.`;
+        else if (/suv/i.test(text)) msg = `Hello ${TEDDY.name}, I would like to book an SUV cab.`;
+        else if (/premium/i.test(text)) msg = `Hello ${TEDDY.name}, I would like to book a Premium cab.`;
+        else if (/ride/i.test(text)) msg = `Hello ${TEDDY.name}, I would like to book a cab ride.`;
+        else if (/quote|fare/i.test(text)) msg = `Hello ${TEDDY.name}, I would like to get a fare quote.`;
+
+        a.href = `${baseWa}?text=${encodeURIComponent(msg)}`;
+        a.target = "_blank";
+        a.rel = "noopener";
+      }
+    });
+
+    $$("[data-prefill-drop]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const dest = btn.dataset.prefillDrop;
+        if (dest) {
+          const msg = `Hello ${TEDDY.name}, I would like to book a cab from Vellore to ${dest}.`;
+          window.location.href = `${baseWa}?text=${encodeURIComponent(msg)}`;
+        }
+      });
+    });
+
+    $$("[data-prefill-vehicle]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const veh = btn.dataset.prefillVehicle;
+        if (veh) {
+          const msg = `Hello ${TEDDY.name}, I would like to book a ${veh} cab from Vellore.`;
+          window.location.href = `${baseWa}?text=${encodeURIComponent(msg)}`;
+        }
+      });
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", () => {
     initHeader();
     initMobileNav();
@@ -399,5 +439,6 @@ const TARIFF_CONFIG = {
     initPrefill();
     initContact();
     initMisc();
+    initBookingLinks();
   });
 })();
