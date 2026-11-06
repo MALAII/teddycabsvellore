@@ -5,10 +5,12 @@
 
 const TEDDY = {
   name: "Teddy Cabs Vellore",
+  contactPerson: "M. Guru Nathan",
   domain: "https://teddycabsvellore.com",
-  whatsappNumber: "", // <-- e.g. "919876543210" (country code + number, digits only)
-  phoneNumber: "",    // <-- e.g. "+91 98765 43210"
-  email: ""           // <-- e.g. "hello@teddycabsvellore.com"
+  whatsappNumber: "918148596089",
+  phoneNumber: "+91 81485 96089",
+  email: "booking@teddycabsvellore.com",
+  address: "246/2B, Sakthi Nagar, Kalpudhur, Katpadi, Vellore - 632007, Tamil Nadu"
 };
 
 /* Centralized Tariff Rates & Vehicle Specifications (Indicative Estimates) */
@@ -334,6 +336,20 @@ const TARIFF_CONFIG = {
         `Pickup: ${g("cpickup")}`, `Destination: ${g("cdestination")}`, `Journey date: ${g("cdate")}`,
         `Message: ${g("cmessage") || "—"}`
       ].join("\n");
+      if (TEDDY.whatsappNumber) {
+        const url = `https://wa.me/${TEDDY.whatsappNumber}?text=${encodeURIComponent(summary)}`;
+        status(out, `<strong>Opening WhatsApp with your enquiry.</strong> Press send in WhatsApp to reach ${esc(TEDDY.name)}.`);
+        const row = document.createElement("div");
+        row.className = "copy-row";
+        const a = document.createElement("a");
+        a.className = "btn btn--sm"; a.href = url; a.target = "_blank"; a.rel = "noopener"; a.textContent = "Open WhatsApp";
+        row.appendChild(a);
+        out.appendChild(row);
+        out.appendChild(copyRow(summary));
+        window.open(url, "_blank", "noopener");
+        return;
+      }
+
       status(out,
         `<strong>This form is not connected to the business yet.</strong> Nothing has been delivered — a backend or WhatsApp link still has to be configured before launch. Your enquiry is prepared below so you can copy it and share it once contact details are published.`,
         true);
@@ -344,6 +360,14 @@ const TARIFF_CONFIG = {
 
   /* 10. Small utilities ---------------------------------------------- */
   function initMisc() {
+    if (TEDDY.whatsappNumber) {
+      $$(".float-wa").forEach((el) => {
+        el.href = `https://wa.me/${TEDDY.whatsappNumber}`;
+        el.target = "_blank";
+        el.rel = "noopener";
+        el.setAttribute("aria-label", "Contact Teddy Cabs Vellore on WhatsApp");
+      });
+    }
     $$("[data-year]").forEach((el) => (el.textContent = new Date().getFullYear()));
     const today = new Date().toISOString().split("T")[0];
     $$('input[type="date"]').forEach((i) => (i.min = today));

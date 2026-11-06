@@ -1698,6 +1698,126 @@ body.nav-open .nav__toggle {
 .map-card strong { display: block; font-family: var(--font-display); font-size: 1.0625rem; color: var(--navy); }
 .map-card p { font-size: 0.8125rem; color: var(--muted); margin: 0.25rem 0 0; }
 
+/* Google Map Location Section for Teddy Cabs */
+.map-card--location {
+  margin-top: 2.75rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(23, 43, 73, 0.1);
+  border-top: 4px solid var(--orange);
+  background: var(--white);
+  box-shadow: 0 10px 30px -10px rgba(23, 43, 73, 0.08);
+  overflow: hidden;
+  transition: box-shadow 0.3s var(--ease);
+}
+.map-card--location:hover {
+  box-shadow: 0 16px 36px -8px rgba(23, 43, 73, 0.12);
+}
+.map-location-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: clamp(1.5rem, 2.5vw, 2rem);
+  background: var(--white);
+  border-bottom: 1px solid rgba(23, 43, 73, 0.08);
+}
+.map-location-title {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.15rem;
+}
+.map-location-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: var(--sky);
+  color: var(--orange-deep);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+  border: 1px solid rgba(240, 120, 66, 0.2);
+  box-shadow: 0 4px 12px rgba(23, 43, 73, 0.05);
+}
+.map-location-icon svg {
+  width: 22px;
+  height: 22px;
+  stroke: currentColor;
+}
+.map-location-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--orange-deep);
+  margin-bottom: 0.25rem;
+}
+.map-location-heading {
+  margin: 0 0 0.35rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 1.8vw, 1.35rem);
+  font-weight: 800;
+  color: var(--navy);
+  line-height: 1.3;
+}
+.map-location-sub {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+.map-location-header .btn {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.map-frame-wrap {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background: var(--sky);
+}
+.map-frame-wrap iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+.map-coverage-footer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.15rem;
+  padding: 1.25rem clamp(1.5rem, 2.5vw, 2rem);
+  background: var(--sky);
+  border-top: 1px solid rgba(23, 43, 73, 0.08);
+}
+.map-coverage-label {
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--navy);
+}
+@media (max-width: 768px) {
+  .map-location-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .map-location-header .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .map-frame-wrap {
+    height: 320px;
+  }
+}
+
 .map-card--full {
   margin-top: 2.5rem;
   min-height: auto;
